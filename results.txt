@@ -1,0 +1,23 @@
+DAXPY:
+2 threads: 0.055876
+4 threads: 0.087043
+
+Matrix:
+2 threads: 0.313603
+4 threads: 0.291012
+
+PI:
+2 threads: 0.215071
+4 threads: 0.217215
+
+Analysis:
+Performance decreased after certain threads due to overhead.
+
+In the DAXPY experiment, the execution time increased when the number of threads was increased from 2 to 4. This happened due to thread creation overhead and limited CPU cores in Google Colab.
+
+In matrix multiplication, a small speedup was observed with 4 threads because the workload was better distributed among threads. However, the improvement was limited by memory access and system constraints.
+
+In the calculation of π, almost no speedup was observed. This is because the overhead of parallelization was comparable to the computation time.
+
+Overall, maximum speedup was achieved at a lower number of threads. Increasing threads beyond this point resulted in performance degradation
+due to synchronization cost, context switching, and limited hardware resources.
