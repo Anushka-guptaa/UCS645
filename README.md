@@ -1,6 +1,6 @@
 # UCS645 - Parallel and Distributed Computing
 
-**All Lab Assignments** for the course **UCS645 (Parallel and Distributed Computing)** are organized in **separate branches**.
+**All Lab Assignments** for the course **UCS645 (Parallel and Distributed Computing)** are organized in **separate Lab Branches**.
 
 ## Repository Structure
 
