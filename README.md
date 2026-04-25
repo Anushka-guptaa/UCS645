@@ -23,7 +23,7 @@ The programs demonstrate:
 | 4        | `q4_primes.c`           | Master-Slave Prime Number Finder                 |
 | 5        | `q5_perfect.c`          | Master-Slave Perfect Number Finder               |
 | -        | `Makefile`              | Easy compilation and execution                   |
-
+| -        | `Assignment_5_UCS645.pdf`              | Report|                 |
 ---
 
 ## How to Compile and Run
