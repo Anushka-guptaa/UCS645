@@ -25,7 +25,9 @@ The assignment focuses on implementing and evaluating **OpenMP-based paralleliza
 | `lj.cpp`                    | Lennard-Jones force & energy computation         | Outer particle loop                   |
 | `sw.cpp`                    | Smith-Waterman dynamic programming alignment     | Score matrix filling                  |
 | `heat.cpp`                  | 2D heat diffusion stencil computation            | Outer time-step / grid loop           |
-| `Assignment_2_Questions_Report.pdf` | Extra Full report with terminal screenshots & analysis | -                                     |
+| `Assignment_2_102303358.pdf` | Extra report for experiment questions with terminal screenshots & analysis | -    
+| `Assignment_2_Questions_Report.pdf` | Full report of assignment questions with terminal screenshots & analysis | -    
+
 
 ---
 
