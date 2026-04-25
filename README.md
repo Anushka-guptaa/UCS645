@@ -5,8 +5,8 @@
 ## Repository Structure
 
 - **`main`** → Overview / Index (this file)
-- **`LAB 1`** → Lab 1 Assignments
-- **`LAB 2`** → Lab 2 Assignments
+- **`LAB 1`** → Assignment 1
+- **`LAB 2`** → Assignment 2
 - **`Lab-3`** → Assignment 3: Parallel Vector Correlation 
 - (Any future labs will be added in their respective branches)
 
