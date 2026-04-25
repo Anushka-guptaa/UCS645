@@ -7,7 +7,7 @@
 - **`main`** → Overview / Index (this file)
 - **`LAB 1`** → Lab 1 Assignments
 - **`LAB 2`** → Lab 2 Assignments
-- - **`Lab-3`** → Assignment 3: Parallel Vector Correlation 
+- **`Lab-3`** → Assignment 3: Parallel Vector Correlation 
 - (Any future labs will be added in their respective branches)
 
 ## How to View Assignments
