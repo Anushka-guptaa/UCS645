@@ -1,4 +1,4 @@
-# UCS645 – OpenMP Lab 1
+# UCS645 – OpenMP Assignment-1
 
 Name: Anushka Gupta
 
