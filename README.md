@@ -28,7 +28,7 @@ The programs demonstrate:
 
 ## How to Compile and Run
 
-### Using Makefile (Recommended)
+### Using Makefile 
 ```bash
 make          # Compile all 5 programs
 make run1     # Run Question 1
