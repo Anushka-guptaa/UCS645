@@ -37,12 +37,12 @@ make run3     # Run Question 3
 make run4     # Run Question 4
 make run5     # Run Question 5
 
-##Manual Commands
+Manual Commands
 Bashmpicc -o qX_xxx qX_xxx.c
 mpirun --allow-run-as-root --oversubscribe -np 4 ./qX_xxx
 
-##Key Results (Tested on Google Colab)
+Key Results (Tested on Google Colab)
 
--Q2 Broadcast Race: MPI_Bcast (0.078s) is ~4.5× faster than manual linear MyBcast (0.35s)
--Q3 Dot Product: Good speedup observed as the number of processes increases
--Q4 & Q5: Master-Slave pattern successfully distributes workload dynamically
+Q2 Broadcast Race: MPI_Bcast (0.078s) is ~4.5× faster than manual linear MyBcast (0.35s)
+Q3 Dot Product: Good speedup observed as the number of processes increases
+Q4 & Q5: Master-Slave pattern successfully distributes workload dynamically
