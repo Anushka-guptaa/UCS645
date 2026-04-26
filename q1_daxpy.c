@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define N (1<<16)   // 65536 as per assignment
+#define N (1<<20)   // 65536 as per assignment
 
 int main(int argc, char** argv) {
     MPI_Init(&argc, &argv);
@@ -29,14 +29,16 @@ int main(int argc, char** argv) {
     MPI_Scatter(X, local_n, MPI_DOUBLE, local_X, local_n, MPI_DOUBLE, 0, MPI_COMM_WORLD);
     MPI_Scatter(Y, local_n, MPI_DOUBLE, local_Y, local_n, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 
-    double start = MPI_Wtime();
+  MPI_Barrier(MPI_COMM_WORLD);   // sync all processes
+double start = MPI_Wtime();
 
-    // DAXPY: local_X[i] = a * local_X[i] + local_Y[i]
-    for (int i = 0; i < local_n; i++) {
-        local_X[i] = a * local_X[i] + local_Y[i];
-    }
+// DAXPY computation
+for (int i = 0; i < local_n; i++) {
+    local_X[i] = a * local_X[i] + local_Y[i];
+}
 
-    double end = MPI_Wtime();
+MPI_Barrier(MPI_COMM_WORLD);   // ensure all finished
+double end = MPI_Wtime();
 
     // Gather back (just for verification)
     MPI_Gather(local_X, local_n, MPI_DOUBLE, X, local_n, MPI_DOUBLE, 0, MPI_COMM_WORLD);
