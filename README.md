@@ -13,7 +13,7 @@
 ## How to View Assignments
 
 To see a specific lab assignment:
-1. Go to **Branches** dropdown (top left)
+1. Go to **Branches** dropdown 
 2. Select the desired branch (e.g., `Lab-3`)
 3. Browse the files in that branch
 
