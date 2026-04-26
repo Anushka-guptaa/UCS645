@@ -27,6 +27,7 @@ nvcc -arch=sm_75 matrix_add.cu -o matrix_add
 ./device_query
 ./array_sum
 ./matrix_add
+---
 
 This assignment demonstrates basic GPU programming using CUDA, including device querying, parallel reduction, and matrix operations.
 
