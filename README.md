@@ -15,20 +15,6 @@
 3. **`matrix_add.cu`**  
    - CUDA program for Matrix Addition of two large integer matrices (Part C)
 
-## How to Compile and Run
-
-```bash
-# Compile all programs
-nvcc -arch=sm_75 device_query.cu -o device_query
-nvcc -arch=sm_75 array_sum.cu -o array_sum
-nvcc -arch=sm_75 matrix_add.cu -o matrix_add
-
-# Run
-./device_query
-./array_sum
-./matrix_add
----
-
 This assignment demonstrates basic GPU programming using CUDA, including device querying, parallel reduction, and matrix operations.
 
 Overview
@@ -76,6 +62,7 @@ Memory management (host and device)
 Kernel execution
 Parallel reduction using atomic operations
 2D grid mapping for matrix operations
+
 Results
 Successfully retrieved GPU properties (Tesla T4)
 Correct computation of the array sum
@@ -83,3 +70,16 @@ Successful matrix addition with expected results
 Conclusion
 
 The assignment demonstrates how CUDA enables parallel computation using GPU resources. It highlights the importance of thread organisation, memory handling, and efficient kernel execution for high-performance computing.
+
+## How to Compile and Run
+
+```bash
+# Compile all programs
+nvcc -arch=sm_75 device_query.cu -o device_query
+nvcc -arch=sm_75 array_sum.cu -o array_sum
+nvcc -arch=sm_75 matrix_add.cu -o matrix_add
+
+# Run
+./device_query
+./array_sum
+./matrix_add
