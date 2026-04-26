@@ -1,4 +1,3 @@
-%%writefile README.md
 # Assignment 8: GPU Accelerated Machine Learning
 
 
@@ -15,11 +14,11 @@ And a detailed report with outputs.
 
 Summary of Work Done
 
-Problem 1: Full bandwidth benchmark + launch configuration analysis (block sizes 64–1024)
-Problem 2: Naive, Shared Memory Tree, and Warp Shuffle reductions + bank conflict timing experiment
-Problem 3: Complete activation suite + BCE & Cross-Entropy loss kernels with verification
-Problem 4: Tiled MatMul, MaxPool2x2, and BatchNorm inference kernels
-Problem 5: Simulated full MNIST CNN training loop showing decreasing loss and increasing accuracy
+-Problem 1: Full bandwidth benchmark + launch configuration analysis (block sizes 64–1024)
+-Problem 2: Naive, Shared Memory Tree, and Warp Shuffle reductions + bank conflict timing experiment
+-Problem 3: Complete activation suite + BCE & Cross-Entropy loss kernels with verification
+-Problem 4: Tiled MatMul, MaxPool2x2, and BatchNorm inference kernels
+-Problem 5: Simulated full MNIST CNN training loop showing decreasing loss and increasing accuracy
 
 ## How to Compile and Run
 
