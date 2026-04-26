@@ -4,8 +4,9 @@
 ---
 
 ## Overview
-This repository contains the complete solutions for all **5 questions** of Assignment 5.  
-The programs demonstrate:
+This repository contains implementations of all five MPI-based programs demonstrating key concepts in parallel computing, including communication models, collective operations, and performance analysis.
+
+The assignment covers:
 - Blocking vs Non-blocking communication
 - Collective operations (`MPI_Bcast`, `MPI_Reduce`)
 - Performance measurement with `MPI_Wtime()`
@@ -23,7 +24,7 @@ The programs demonstrate:
 | 4        | `q4_primes.c`           | Master-Slave Prime Number Finder                 |
 | 5        | `q5_perfect.c`          | Master-Slave Perfect Number Finder               |
 | -        | `Makefile`              | Easy compilation and execution                   |
-| -        | `Assignment_5_UCS645.pdf`              | Report|                 |
+| -        | `Assignment_5_UCS645.pdf`              | Detailed Report|                 |
 ---
 
 ## How to Compile and Run
@@ -41,8 +42,11 @@ Manual Commands
 Bashmpicc -o qX_xxx qX_xxx.c
 mpirun --allow-run-as-root --oversubscribe -np 4 ./qX_xxx
 
-Key Results (Tested on Google Colab)
+Key Observations
+MPI_Bcast significantly outperforms manual broadcast due to its tree-based implementation.
+Parallel speedup is limited by communication overhead and problem size.
+Efficiency decreases as the number of processes increases.
+The master-slave model enables effective dynamic load balancing for irregular tasks.
+Conclusion
 
-Q2 Broadcast Race: MPI_Bcast (0.078s) is ~4.5× faster than manual linear MyBcast (0.35s)
-Q3 Dot Product: Good speedup observed as the number of processes increases
-Q4 & Q5: Master-Slave pattern successfully distributes workload dynamically
+The assignment demonstrates that parallel computing can improve performance, but efficiency depends heavily on communication cost, workload distribution, and algorithm design. Optimized MPI primitives and proper problem sizing are essential for achieving scalability.
