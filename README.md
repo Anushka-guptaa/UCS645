@@ -1,4 +1,3 @@
-%%writefile README.md
 # Assignment 7: CUDA Part II
 
 ## Files Included
