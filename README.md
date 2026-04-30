@@ -1,14 +1,14 @@
 # High-Performance Grid-Based Environmental Spread Modeling  
 ### Using Multithreaded CPU Parallelism (OpenMP)
 
-## 📌 Overview
+##  Overview
 This project implements a **grid-based environmental spread simulation** (forest fire model) using **C++ and OpenMP**. The simulation demonstrates how parallel computing can significantly improve performance for computationally intensive grid-based problems.
 
 The system models fire propagation across a 2D grid where each cell evolves based on its neighbors over discrete time steps.
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 - Implement a **sequential baseline** simulation
 - Develop an **OpenMP parallel version**
 - Compare execution time across:
@@ -21,7 +21,7 @@ The system models fire propagation across a 2D grid where each cell evolves base
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 - **Language:** C++17  
 - **Parallelism:** OpenMP  
 - **Timing:** std::chrono (high resolution clock)  
@@ -30,14 +30,14 @@ The system models fire propagation across a 2D grid where each cell evolves base
 
 ---
 
-## 💻 Execution Environment
+## Execution Environment
 - Implemented and executed on **Kali Linux VM**
 - CPU utilization and thread activity verified using **htop**
 - Peak CPU usage reached ~84.9%, confirming effective parallel execution across multiple cores :contentReference[oaicite:1]{index=1}
 
 ---
 
-## 🔥 Simulation Model
+##  Simulation Model
 
 ### Cell States:
 - `0 → EMPTY`
