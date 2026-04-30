@@ -1,25 +1,66 @@
-# UCS645 - Parallel and Distributed Computing
+# High-Performance Grid-Based Environmental Spread Modeling  
+### Using Multithreaded CPU Parallelism (OpenMP)
 
-**All Lab Assignments** for the course **UCS645 (Parallel and Distributed Computing)** are organized in **separate Lab Branches**.
+## 📌 Overview
+This project implements a **grid-based environmental spread simulation** (forest fire model) using **C++ and OpenMP**. The simulation demonstrates how parallel computing can significantly improve performance for computationally intensive grid-based problems.
 
-## Repository Structure
-
-- **`main`** → Overview / Index (this file)
-- **`LAB 1`** → Assignment 1
-- **`LAB 2`** → Assignment 2
-- **`Lab-3`** → Assignment 3: Parallel Vector  
-- (Any future labs will be added in their respective branches)
-
-## How to View Assignments
-
-To see a specific lab assignment:
-1. Go to **Branches** dropdown 
-2. Select the desired branch (e.g., `Lab-3`)
-3. Browse the files in that branch
+The system models fire propagation across a 2D grid where each cell evolves based on its neighbors over discrete time steps.
 
 ---
 
-**Submitted by:** Anushka Gupta  
-**Roll No:** 102303358  
+## 🎯 Objectives
+- Implement a **sequential baseline** simulation
+- Develop an **OpenMP parallel version**
+- Compare execution time across:
+  - Grid sizes: `200×200`, `400×400`, `600×600`
+  - Thread counts: `1, 2, 4, 8`
+- Analyse:
+  - Speedup
+  - Parallel efficiency
+  - Scalability
 
-This repository contains all practical work for UCS645 under Dr. Saif Nalband.
+---
+
+## ⚙️ Tech Stack
+- **Language:** C++17  
+- **Parallelism:** OpenMP  
+- **Timing:** std::chrono (high resolution clock)  
+- **Compiler:** g++ with `-fopenmp`  
+- **Environment:** Kali Linux  
+
+---
+
+## 💻 Execution Environment
+- Implemented and executed on **Kali Linux VM**
+- CPU utilization and thread activity verified using **htop**
+- Peak CPU usage reached ~84.9%, confirming effective parallel execution across multiple cores :contentReference[oaicite:1]{index=1}
+
+---
+
+## 🔥 Simulation Model
+
+### Cell States:
+- `0 → EMPTY`
+- `1 → TREE`
+- `2 → BURNING`
+
+### Update Rules:
+1. Burning → Empty  
+2. Tree + Burning neighbor → Burning  
+3. Tree (no burning neighbor) → Tree  
+4. Empty → Empty  
+
+- Fire starts at **top-center of the grid**
+- Simulation runs for **200 steps**
+---
+
+## Key Observations
+Maximum speedup achieved: ~3.47× (600×600, 8 threads)
+Efficiency decreases as thread count increases (Amdahl’s Law)
+Larger workloads improve parallel efficiency
+No race conditions due to independent cell updates
+
+## Parallelization Strategy
+- OpenMP directive used:
+  ```cpp
+  #pragma omp parallel for collapse(2) schedule(static)
